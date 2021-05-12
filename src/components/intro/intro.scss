@@ -1,0 +1,131 @@
+@import '../../global.scss';
+.intro {
+    background-color: white;
+    display: flex;
+    @include mobile {
+        flex-direction: column;
+    }
+    .left {
+        flex: 0.55;
+        position: relative;
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            padding-left: 2rem;
+            display: flex;
+            flex-direction: column;
+            @include mobile {
+                justify-content: space-between;
+                height: 70vh;
+                padding: 0px 0.9rem;
+            }
+            h2 {
+                font-weight: 600;
+                font-size: 1.2rem;
+                color: $mainColor;
+                margin-top: 2.2rem;
+                margin-bottom: .91rem;
+                @include mobile {
+                    margin: 0;
+                    margin-top: 3rem;
+                }
+            }
+            h1 {
+                font-size: 3.8rem;
+                margin: .8rem 0px;
+                font-weight: 700;
+                line-height: 60px;
+                overflow-y: auto;
+                @include mobile {
+                    font-size: 3rem;
+                    line-height: 3.1rem;
+                    // margin: 2rem 0rem;
+                }
+            }
+            p {
+                font-size: 1.4rem;
+                font-weight: 500;
+                span {
+                    font-size: inherit;
+                    color: $mainYellow;
+                }
+                .ityped-cursor {
+                    animation: blink 1s infinite;
+                }
+                @keyframes blink {
+                    to {
+                        opacity: 0;
+                    }
+                }
+            }
+            .contactMeBtn {
+                margin-top: 1.5rem;
+                font-size: 1.3rem;
+                border: solid 1px $mainYellow;
+                color: $mainYellow;
+                font-weight: 400;
+                padding: .6rem 3.2rem .6rem .4rem;
+                cursor: pointer;
+                display: inline-block;
+                transition: all 1s ease;
+                &:hover {
+                    background-color: $mainYellow;
+                    color: white;
+                }
+                img {
+                    width: 40px;
+                    animation: arrowBlink 2s infinite;
+                }
+                @keyframes arrowBlink {
+                    to {
+                        opacity: 0.3;
+                    }
+                }
+            }
+        }
+        a {
+            position: absolute;
+            bottom: 10px;
+            right: 20%;
+        }
+    }
+    .right {
+        flex: 0.45;
+        overflow: hidden;
+        .imgContainer {
+            margin: 1rem;
+            width: 480px;
+            height: 480px;
+            background-color: $mainYellow;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            float: left;
+            img {
+                height: 90%;
+            }
+        }
+    }
+    .wrapperSm {
+        @include mobile {
+            display: block;
+            padding: 0px 0.9rem;
+            margin-top: 1.9rem 0px;
+        }
+        .itemCountSm {
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            a {
+                color: $mainColor;
+                display: block;
+                .icon {
+                    display: block;
+                    color: inherit;
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+}

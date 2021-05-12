@@ -1,0 +1,22 @@
+@import './global.scss';
+.app {
+    max-height: 100vh !important;
+    overflow: hidden;
+    .d-sm-none {
+        @include mobile {
+            display: none !important;
+        }
+    }
+    .d-sm-true {
+        visibility: hidden;
+        @include mobile {
+            visibility: visible;
+        }
+    }
+    .mt-3 {
+        margin-top: .5rem;
+    }
+    .mt-5 {
+        margin-top: .8rem;
+    }
+}
