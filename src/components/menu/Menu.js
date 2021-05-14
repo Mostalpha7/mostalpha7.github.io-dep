@@ -1,4 +1,5 @@
 import './menu.scss'
+import { Link } from 'react-router-dom'
 const Menu = ({ menuOpen, setMenuOpen }) => {
   return (
     <div className={'menu ' + (menuOpen && 'active')}>
@@ -6,10 +7,8 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
         <div></div>
         <div
           className='hambugger'
-          // menuOpen ? () => setMenuOpen(false) : () => setMenuOpen(true)
           onClick={() => {
             menuOpen ? setMenuOpen(false) : setMenuOpen(true)
-            console.log(menuOpen)
           }}
         >
           <span className='line1'></span>
@@ -20,19 +19,24 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
       <div className='menuContainer'>
         <ul>
           <li>
-            <a href='#intro'>Home</a>
+            <a onClick={() => setMenuOpen(false)}>
+              <Link to='/'>Home</Link>
+            </a>
           </li>
           <li>
-            <a href='#portfolio'>Portfolio</a>
+            <a onClick={() => setMenuOpen(false)}>
+              <Link to='/about'>About</Link>
+            </a>
           </li>
           <li>
-            <a href='#works'>Works</a>
+            <a onClick={() => setMenuOpen(false)}>
+              <Link to='/portfolio'>Portfolio</Link>
+            </a>
           </li>
           <li>
-            <a href='#testimonial'>Testimonials</a>
-          </li>
-          <li>
-            <a href='#contact'>Contact</a>
+            <a onClick={() => setMenuOpen(false)}>
+              <Link to='/react-out'>React Out</Link>
+            </a>
           </li>
         </ul>
       </div>

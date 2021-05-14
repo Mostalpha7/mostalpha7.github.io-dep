@@ -1,11 +1,13 @@
 @import "../../global.scss";
 .topbar {
     width: 100%;
+    position: fixed;
     padding-top: 1rem;
-    background-color: white;
-    color: $mainColor;
+    padding-bottom: 1rem;
+    color: white;
     z-index: 2;
     transition: all 1s ease;
+    padding-bottom: .1rem;
     a:hover {
         transition: all 0.5s ease;
         color: $mainYellow !important;
@@ -25,8 +27,8 @@
         .logo {
             font-size: 1.2rem;
             font-weight: 600;
-            color: inherit;
-            text-decoration: none;
+            text-decoration: none !important;
+            color: whitesmoke;
             margin-right: 2rem;
         }
         .itemCount {
@@ -52,7 +54,6 @@
     .right {
         .hambugger {
             width: 22px;
-            // height: 12px;
             height: 19px;
             display: flex;
             flex-direction: column;
@@ -61,12 +62,14 @@
             span {
                 width: 100%;
                 height: 3px;
-                background-color: $mainColor;
+                background-color: whitesmoke;
                 transform-origin: left;
                 transition: all 2s ease;
-                // &:nth-child(2) {
-                //     opacity: 0;
-                // }
+            }
+        }
+        .hambugger:hover {
+            span {
+                background-color: red !important;
             }
         }
     }
@@ -96,6 +99,21 @@
                 &:last-child {
                     transform: rotate(-45deg);
                     background-color: white;
+                }
+            }
+        }
+        .hambugger:hover {
+            span {
+                &:first-child {
+                    background-color: red !important;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:last-child {
+                    transform: rotate(-45deg);
+                    background-color: red !important;
                 }
             }
         }

@@ -1,0 +1,37 @@
+@import '../../global.scss';
+.about {
+    // background-color: $mainColor;
+    .wrapper {
+        h1:first-of-type {
+            margin-top: 10rem !important;
+            color: whitesmoke;
+        }
+        h2 {
+            font-size: 2.2rem !important;
+            font-weight: 600 !important;
+        }
+        p {
+            width: 65%;
+            font-weight: 400 !important;
+        }
+        .languages {
+            .mainLanguages {
+                display: flex;
+                margin-bottom: 2rem;
+            }
+            .imgContainer {
+                background-color: whitesmoke;
+                border-radius: 50%;
+                padding: 1.24rem;
+                margin-right: 1rem;
+                &:last-of-type {
+                    margin-right: 0px;
+                }
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

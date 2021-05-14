@@ -1,12 +1,22 @@
 import './intro.scss'
 import { init } from 'ityped'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 
 const Intro = () => {
+  const [bgColor, setBgColor] = useState(false)
+  const darkMood = {
+    backgroundColor: 'rgb(49, 46, 129)',
+    color: 'white'
+  }
+  const whiteMood = {
+    backgroundColor: 'white',
+    color: 'rgb(49, 46, 129)'
+  }
+
   const textRef = useRef()
   useEffect(() => {
     init(textRef.current, {
@@ -15,26 +25,29 @@ const Intro = () => {
       backSpeed: 45,
       strings: [
         'awesome wordpress websites',
-        'front end  applications',
-        'back end applications',
-        'mobile applications'
+        'frontend web  applications',
+        'mobile applications',
+        'backend applications'
       ]
     })
   }, [])
   return (
-    <div>
+    <div style={bgColor ? darkMood : whiteMood}>
       <div className='intro'>
         <div className='left'>
           <div className='wrapper'>
             <div></div>
-            <h2>Hello World!</h2>
+            <div className='mt-10'></div>
+            <h2 onClick={() => setBgColor(!bgColor)}>Hello World!</h2>
             <div>
               <h1>
-                I am <br />
-                Mustapha <br /> A. Abiodun
+                I <span className='paintYellow'>am</span> <br />
+                Mustapha <br /> A. <span className='paintYellow'>Abiodun</span>
               </h1>
               <p>
-                I build <span ref={textRef}></span>
+                <span className='paintCream'>
+                  I build <span ref={textRef}></span>
+                </span>
               </p>
             </div>
             <div>
@@ -45,7 +58,6 @@ const Intro = () => {
 
         <div className='right d-sm-none'>
           <div className='imgContainer'>
-            {/* <img src='assets/man.png' alt='' /> */}
             <img src='assets/mostalpha7.png' alt='' />
           </div>
         </div>

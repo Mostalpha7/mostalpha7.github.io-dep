@@ -1,8 +1,7 @@
 $mainColor: rgb(49, 46, 129);
-// $mainYellow: #ff8000;
 $mainYellow: crimson;
+$mainYellowOpacity:rgba(220, 20, 60, 0.507);
 $mobileWidth: 541px;
-// $width: 768px;
 @mixin mobile {
     @media (max-width: $mobileWidth) {
         @content
