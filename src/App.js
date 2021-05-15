@@ -6,15 +6,11 @@ import {
   Redirect
 } from 'react-router-dom'
 
-import Contact from './components/contact/Contact'
-
-import Portfolio from './components/portfolio/Portfolio'
-import Topbar from './components/topbar/Topbar'
-// import Works from './components/works/Works'
 import './app.scss'
 import Menu from './components/menu/Menu'
-import Intro from './components/intro/Intro'
-import About from './components/about/About'
+import Intro from './pages/intro/Intro'
+import About from './pages/about/About'
+import Contact from './pages/contact/Contact'
 
 function App () {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -25,21 +21,16 @@ function App () {
         <Switch>
           <Route path='/' exact>
             <div className='viewHeight'>
-              <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-              <Intro />
+              <Intro menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             </div>
           </Route>
           <Route path='/about'>
-            <div className>
-              <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-              <About />
+            <div>
+              <About menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             </div>
           </Route>
           <Route path='/contact'>
-            <div className>
-              <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-              <Contact />
-            </div>
+            <Contact menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           </Route>
           <Redirect to='/' />
         </Switch>

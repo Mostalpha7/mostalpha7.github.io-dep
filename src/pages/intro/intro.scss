@@ -62,8 +62,8 @@
             .contactMeBtn {
                 margin-top: 1.5rem;
                 font-size: 1.3rem;
-                border: solid 1px $mainYellow;
-                color: $mainYellow;
+                border: solid 1px $mainYellow !important;
+                color: $mainYellow !important;
                 font-weight: 400;
                 padding: .6rem 3.2rem .6rem .4rem;
                 cursor: pointer;
@@ -87,11 +87,11 @@
                 }
             }
         }
-        a {
-            position: absolute;
-            bottom: 10px;
-            right: 20%;
-        }
+        // a {
+        //     position: absolute;
+        //     bottom: 10px;
+        //     right: 20%;
+        // }
     }
     .right {
         flex: 0.45;
@@ -133,4 +133,9 @@
             }
         }
     }
+}
+
+.alll {
+    background-color: red !important;
+    display: none;
 }
