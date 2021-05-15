@@ -45,8 +45,7 @@ const Intro = () => {
 
         <div className='right d-sm-none'>
           <div className='imgContainer'>
-            {/* <img src='assets/man.png' alt='' /> */}
-            <img src='assets/mostalpha7.png' alt='' />
+            <img src='assets/noimage.png' alt='' />
           </div>
         </div>
       </div>

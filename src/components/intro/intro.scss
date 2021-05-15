@@ -100,14 +100,15 @@
             margin: 1rem;
             width: 480px;
             height: 480px;
-            background-color: $mainYellow;
+            // background-color: $mainYellow;
+            background-color: rgba(49, 46, 129, 0.562);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: flex-end;
             float: left;
             img {
-                height: 90%;
+                height: 80%;
             }
         }
     }
