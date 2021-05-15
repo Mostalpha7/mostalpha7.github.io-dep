@@ -2,15 +2,18 @@ import './topbar.scss'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import { Link } from 'react-router-dom'
 
 const Topbar = ({ setMenuOpen, menuOpen }) => {
   return (
     <div className={'topbar ' + (menuOpen && 'active')}>
       <div className='wrapper'>
         <div className='left'>
-          <a href='#intro' className='logo'>
-            Mustapha <br />
-            A. Abiodun
+          <a className='logo'>
+            <Link to='/' className='logo'>
+              Mustapha <br />
+              A. Abiodun
+            </Link>
           </a>
           <div className='itemCount d-sm-none'>
             <a href='https://github.com/mostalpha7/' target='_blanck'>

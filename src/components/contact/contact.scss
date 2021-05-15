@@ -1,3 +1,23 @@
+@import '../../global.scss';
 .contact {
-    background-color: lightpink;
+    // margin-top: 5rem;
+    margin-top: 10.4rem;
+    @include mobile {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .wrapper {
+        h1 {
+            font-size: 3rem !important;
+        }
+        p {
+            line-height: 1.7rem;
+        }
+        a {
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: $mainColor;
+        }
+    }
 }

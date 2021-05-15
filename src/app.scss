@@ -1,7 +1,11 @@
 @import './global.scss';
 .app {
-    max-height: 100vh !important;
+    // max-height: 100vh !important;
     overflow: hidden;
+    .viewHeight {
+        overflow: hidden;
+        max-height: 100vh !important;
+    }
     .d-sm-none {
         @include mobile {
             display: none !important;
@@ -18,5 +22,64 @@
     }
     .mt-5 {
         margin-top: .8rem;
+    }
+    .wrapper {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        @include mobile {
+            padding: 0px 0.9rem;
+        }
+        h1 {
+            font-size: 3.6rem;
+            margin: .8rem 0px;
+            font-weight: 700;
+            line-height: 60px;
+            overflow-y: auto;
+            @include mobile {
+                font-size: 3rem;
+                line-height: 3.1rem;
+            }
+        }
+        h2 {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 2.2rem;
+            margin-bottom: .91rem;
+            @include mobile {
+                margin: 0;
+                margin-top: 3rem;
+            }
+        }
+        p {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+        .contactMeBtn {
+            margin-top: 1.5rem;
+            font-size: 1.3rem;
+            border: solid 1px $mainYellow;
+            color: $mainYellow;
+            font-weight: 400;
+            padding: .6rem 3.2rem .6rem .4rem;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 1s ease;
+            &:hover {
+                background-color: $mainYellow;
+                color: white;
+            }
+            img {
+                width: 40px;
+                animation: arrowBlink 2s infinite;
+            }
+            @keyframes arrowBlink {
+                to {
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+    .paintYellow {
+        color: $mainYellow !important;
     }
 }

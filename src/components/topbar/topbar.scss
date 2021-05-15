@@ -1,9 +1,11 @@
 @import "../../global.scss";
 .topbar {
     width: 100%;
-    padding-top: 1rem;
     background-color: white;
     color: $mainColor;
+    position: fixed;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
     z-index: 2;
     transition: all 1s ease;
     a:hover {
