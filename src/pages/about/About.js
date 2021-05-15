@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import Loader from '../../components/loader/Loader'
 import Topbar from '../../components/topbar/Topbar'
 import './about.scss'
@@ -124,6 +125,9 @@ const About = props => {
                     </div>
                   </div>
                 </div>
+                <Link to='/contact'>
+                  <span className='contactMeBtn'>Reach Out</span>
+                </Link>
               </div>
             </div>
           </motion.div>

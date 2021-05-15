@@ -59,33 +59,6 @@
                     }
                 }
             }
-            .contactMeBtn {
-                margin-top: 1.5rem;
-                font-size: 1.3rem;
-                border: solid 1px $mainYellow !important;
-                color: $mainYellow !important;
-                font-weight: 400;
-                padding: .6rem 3.2rem .6rem .4rem;
-                cursor: pointer;
-                display: inline-block;
-                transition: all 1s ease;
-                @include mobile {
-                    margin-top: 0px !important;
-                }
-                &:hover {
-                    background-color: $mainYellow;
-                    color: white;
-                }
-                img {
-                    width: 40px;
-                    animation: arrowBlink 2s infinite;
-                }
-                @keyframes arrowBlink {
-                    to {
-                        opacity: 0.3;
-                    }
-                }
-            }
         }
         // a {
         //     position: absolute;

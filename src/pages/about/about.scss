@@ -1,6 +1,7 @@
 @import '../../global.scss';
 .about {
     .wrapper {
+        margin-bottom: 2rem;
         h1:first-of-type {
             margin-top: 10rem !important;
         }
@@ -15,7 +16,6 @@
         .languages {
             .mainLanguages {
                 display: flex;
-                margin-bottom: 2rem;
             }
             .imgContainer {
                 background-color: whitesmoke;

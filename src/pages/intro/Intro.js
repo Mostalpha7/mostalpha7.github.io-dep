@@ -1,13 +1,14 @@
 import './intro.scss'
 import { init } from 'ityped'
 import { useEffect, useRef, useState } from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import Loader from '../../components/loader/Loader'
 import Topbar from '../../components/topbar/Topbar'
-import { motion } from 'framer-motion'
 
 const Intro = props => {
   const [loader, setLoader] = useState(false)
@@ -61,9 +62,9 @@ const Intro = props => {
                     </p>
                   </div>
                   <div>
-                    <a href='mailto:mostalpha7@gmail.com'>
-                      <span className='contactMeBtn'>Hire Me.</span>
-                    </a>
+                    <Link to='/about'>
+                      <span className='contactMeBtn'>About Me.</span>
+                    </Link>
                   </div>
                 </div>
               </div>
