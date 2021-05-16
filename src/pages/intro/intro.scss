@@ -60,11 +60,6 @@
                 }
             }
         }
-        // a {
-        //     position: absolute;
-        //     bottom: 10px;
-        //     right: 20%;
-        // }
     }
     .right {
         flex: 0.45;
@@ -73,7 +68,6 @@
             margin: 1rem;
             width: 480px;
             height: 480px;
-            // background-color: $mainYellow;
             background-color: rgba(49, 46, 129, 0.562);
             border-radius: 50%;
             display: flex;
@@ -82,27 +76,6 @@
             float: left;
             img {
                 height: 80%;
-            }
-        }
-    }
-    .wrapperSm {
-        @include mobile {
-            display: block;
-            padding: 0px 0.9rem;
-            margin-top: 1.9rem 0px;
-        }
-        .itemCountSm {
-            width: 60%;
-            display: flex;
-            justify-content: space-between;
-            a {
-                color: $mainColor;
-                display: block;
-                .icon {
-                    display: block;
-                    color: inherit;
-                    font-size: 2.2rem;
-                }
             }
         }
     }

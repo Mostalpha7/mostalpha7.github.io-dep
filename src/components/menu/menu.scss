@@ -1,74 +1,117 @@
 @import '../../global.scss';
 .menu {
-    width: 100vw;
-    width: 250px;
-    height: 100vh;
-    background-color: $mainColor;
+    // width: 80vw;
+    // height: 100vh;
     position: fixed;
-    top: 0;
-    right: 0;
+    // top: 0;
+    // right: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    right: -300px;
-    transition: all .7s ease;
+    // right: -80vw;
     z-index: 3;
-    &.active {
-        right: 0;
+    color: whitesmoke;
+    transition: all .7s ease;
+    .left {
+        width: 0vw;
+        height: 100vh;
+        left: 0;
+        position: fixed;
+        background-color: rgba(12, 12, 27, 0.774);
+        cursor: pointer;
+        transition: all 1s ease;
+        &.active {
+            width: 20vw;
+        }
     }
-    .hambuggerContainer {
-        display: flex;
-        justify-content: space-between;
-        padding: 30px 30px;
-        .hambugger {
-            top: 2%;
-            right: 2%;
-            width: 22px;
-            height: 19px;
+    .right {
+        height: 100vh;
+        width: 0vw;
+        right: 0;
+        background-color: $mainColor;
+        position: fixed;
+        transition: all .7s ease;
+        h2 {
+            font-weight: 500;
+        }
+        .hambuggerContainer {
             display: flex;
-            flex-direction: column;
             justify-content: space-between;
-            cursor: pointer;
-            span {
-                width: 100%;
-                height: 3px;
-                background-color: white;
-                transform-origin: left;
-                transition: all 2s ease;
-            }
-            span {
-                &:first-child {
-                    transform: rotate(45deg);
+            padding: 30px 30px;
+            .hambugger {
+                top: 2%;
+                right: 2%;
+                width: 22px;
+                height: 19px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                span {
+                    width: 100%;
+                    height: 3px;
+                    background-color: white;
+                    transform-origin: left;
+                    transition: all 2s ease;
                 }
-                &:nth-child(2) {
-                    opacity: 0;
-                }
-                &:last-child {
-                    transform: rotate(-45deg);
+                span {
+                    &:first-child {
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &:last-child {
+                        transform: rotate(-45deg);
+                    }
                 }
             }
         }
-    }
-    .menuContainer {
-        padding: 0rem 1rem;
-        ul {
-            margin: 0px;
-            padding: 0px;
-            list-style: none;
-            font-size: 1.2rem;
-            color: whitesmoke;
-            width: 100%;
-            li {
-                margin-bottom: 20px;
-                a {
-                    font-size: inherit;
-                    color: inherit;
-                    text-decoration: none;
-                }
-                &:hover {
-                    font-weight: 500;
+        .menuContainer {
+            display: flex;
+            // padding-right: 2.5rem;
+            justify-content: space-around;
+            ul {
+                margin: 0px;
+                padding: 0px 2rem;
+                list-style: none;
+                font-size: 2rem;
+                font-weight: 500 !important;
+                color: whitesmoke;
+                width: 100%;
+                li {
+                    margin-bottom: 20px;
+                    &:hover {
+                        font-weight: 600;
+                    }
                 }
             }
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            align-items: flex-start;
+            .icon {
+                font-size: 19px;
+                margin-right: 5px;
+            }
+            span {
+                font-size: 17px;
+            }
+        }
+        .wrapperSm {
+            .itemCountSm {
+                width: 100%;
+                justify-content: space-between;
+                .icon {
+                    font-size: 19px !important;
+                    color: whitesmoke !important;
+                }
+            }
+        }
+        &.active {
+            right: 0;
+            width: 80vw;
         }
     }
 }
