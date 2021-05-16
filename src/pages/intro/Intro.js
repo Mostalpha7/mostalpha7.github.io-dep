@@ -46,13 +46,12 @@ const Intro = props => {
             transition={{ duration: 0.65 }}
           >
             <Topbar menuOpen={props.menuOpen} setMenuOpen={props.setMenuOpen} />
-
             <div className='intro'>
               <div className='left'>
                 <div className='wrapper'>
                   <div></div>
-                  <h2>Hello World!</h2>
                   <div>
+                    <h2>Hello World!</h2>
                     <h1>
                       I am <br />
                       Mustapha <br /> A. Abiodun

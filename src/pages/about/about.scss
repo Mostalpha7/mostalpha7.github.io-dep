@@ -1,9 +1,11 @@
 @import '../../global.scss';
 .about {
     .wrapper {
-        margin-bottom: 2rem;
         h1:first-of-type {
             margin-top: 10rem !important;
+            @include mobile {
+                margin-top: 7rem !important;
+            }
         }
         h2 {
             font-size: 2.2rem !important;
@@ -12,10 +14,14 @@
         p {
             width: 65%;
             font-weight: 400 !important;
+            @include mobile {
+                width: 100%;
+            }
         }
         .languages {
             .mainLanguages {
                 display: flex;
+                flex-wrap: wrap;
             }
             .imgContainer {
                 background-color: whitesmoke;

@@ -1,12 +1,16 @@
 @import '../../global.scss';
 .contact {
-    // margin-top: 5rem;
-    margin-top: 10.4rem;
     @include mobile {
         flex-direction: column;
         margin-top: 2rem;
     }
     .wrapper {
+        h1:first-of-type {
+            margin-top: 10rem !important;
+            @include mobile {
+                margin-top: 5rem !important;
+            }
+        }
         h1 {
             font-size: 3rem !important;
         }

@@ -1,26 +1,24 @@
 @import '../../global.scss';
 .menu {
-    // width: 80vw;
-    // height: 100vh;
+    height: 100vh;
     position: fixed;
-    // top: 0;
-    // right: 0;
+    top: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
-    // right: -80vw;
     z-index: 3;
     color: whitesmoke;
     transition: all .7s ease;
     .left {
         width: 0vw;
-        height: 100vh;
+        height: 150vh;
         left: 0;
         position: fixed;
         background-color: rgba(12, 12, 27, 0.774);
         cursor: pointer;
         transition: all 1s ease;
         &.active {
-            width: 20vw;
+            width: 25vw;
         }
     }
     .right {
