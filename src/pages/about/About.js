@@ -32,18 +32,16 @@ const About = props => {
             <div className='about'>
               <div className='wrapper'>
                 <h1 className='mt-5 first'>
-                  <span className='paintYellow'> Hi, </span>I'm Mustapha A.
+                  Hi, I'm Mustapha A.
                   <span className='d-sm-none'>
                     <br />
                   </span>
-                  <span> Abiodun</span>
-                  <span className='paintYellow'> a </span> Website
-                  <span className='paintYellow'> Dev </span> <span>& </span>
+                  <span> Abiodun</span> a Website Dev &
                   <span className='d-sm-none'>
                     <br />
                   </span>
-                  Software Engineer from
-                  <span className='paintYellow'> Earth. </span>
+                  <span className='paintYellow'>Software Engineer </span>
+                  from Earth.
                 </h1>
                 <p className='mt-10'>
                   I am a young and purposeful individual willing to improve and
